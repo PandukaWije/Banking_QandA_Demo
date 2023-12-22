@@ -39,7 +39,7 @@ index_pdf = pinecone.GRPCIndex(index_name_pdf)
 embeddings = OpenAIEmbeddings()
 docsearch_pdf = Pinecone.from_existing_index(index_name_pdf, embeddings)
 
-qa = RetrievalQA.from_chain_type(llm=ChatOpenAI(model='gpt-4', temperature=0), chain_type="stuff", retriever=docsearch_pdf.as_retriever(search_type="similarity", search_kwargs={"k": 3}))
+qa = RetrievalQA.from_chain_type(llm=ChatOpenAI(model='gpt-4', temperature=0), chain_type="stuff", retriever=docsearch_pdf.as_retriever(search_type="similarity", search_kwargs={"k": 10}))
 static_prompt = "Extract the information from the document and answer the question, and elaborate with the given answer, Questions are most likely to be ask from bank customers about the mobile and online banking, app configs. Question:"
 
 
