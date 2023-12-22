@@ -7,13 +7,9 @@ from langchain.llms import OpenAI
 from langchain.chat_models import ChatOpenAI
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import Chroma, FAISS
 from langchain.chains import RetrievalQA
-from io import BytesIO
-from PyPDF2 import PdfReader
-from dotenv import load_dotenv
 from langchain.vectorstores import Pinecone
-load_dotenv()
+
 
 
 # Page title
