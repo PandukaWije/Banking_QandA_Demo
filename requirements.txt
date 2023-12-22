@@ -1,4 +1,4 @@
 openai==0.28.1
-pinecone_client==2.2.4
+pinecone-client[grpc]
 streamlit==1.24.0
 langchain
