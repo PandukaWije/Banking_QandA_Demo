@@ -4,4 +4,3 @@ streamlit==1.24.0
 langchain
 tiktoken
 neo4j
-langchain_openai
