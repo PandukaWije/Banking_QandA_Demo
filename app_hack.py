@@ -16,7 +16,7 @@ from langchain.chat_models import ChatOpenAI
 
 # Page title
 st.set_page_config(page_title='📄 Service Bot Q&A')
-st.image('logo2.png')
+# st.image('logo2.png')
 st.title('🤖 Corporate Internet Banking Service bot 📃')
 st.warning('Service Bot is equipped with Bill Payments, Fixed Deposits, Home Tiles, Loan Service, Account Summery, CIB Pay Roll, User Information Manual, CIB General Services, Interbank Fund Transfer Manuals')
 st.divider()
