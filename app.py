@@ -34,7 +34,7 @@ openai_api_key = os.environ.get('OPENAI_API_KEY')
 
 # pinecone.init(api_key=PINECONE_API_KEY, environment=PINECONE_ENVIRONMENT)
 
-pc = Pinecone(api_key=PINECONE_API_KEY)
+pc = Pinecone(PINECONE_API_KEY)
 # index = pc.Index("quickstart")
 index_name_pdf = 'service-bot'
 # index_pdf = pinecone.GRPCIndex(index_name_pdf)
