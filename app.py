@@ -1,6 +1,7 @@
 import os
 import openai
 import pinecone
+from pinecone import Pinecone
 
 import streamlit as st
 from langchain.llms import OpenAI
@@ -31,9 +32,13 @@ PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
 openai_api_key = os.environ.get('OPENAI_API_KEY')
 
 
-pinecone.init(api_key=PINECONE_API_KEY, environment=PINECONE_ENVIRONMENT)
+# pinecone.init(api_key=PINECONE_API_KEY, environment=PINECONE_ENVIRONMENT)
+
+pc = Pinecone(api_key=PINECONE_API_KEY)
+# index = pc.Index("quickstart")
 index_name_pdf = 'service-bot'
-index_pdf = pinecone.GRPCIndex(index_name_pdf)
+# index_pdf = pinecone.GRPCIndex(index_name_pdf)
+index_pdf = pc.GRPCIndex(index_name_pdf)
 
 # Initialize Embedding Model
 embeddings = OpenAIEmbeddings()
